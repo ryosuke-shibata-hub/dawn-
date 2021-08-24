@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="ページの内容を表す文章" />
     <title></title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+
+
+
+
+
+
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!--サイトのアイコン指定-->
@@ -22,18 +30,38 @@
 <body>
     <header>
         <div id = "head">
-        <h1><a><img src="images/logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/arrow.png"></p>
-                <div>
+        <h1>
+            <a href="/top">
+                <img src="{{asset('images/main_logo.png')}}">
+            </a>
+        </h1>
+            <div id="g-nav">
+                <div id="user">
+                    <p>
+                        <td> {{ Auth::user()->username}} さん</td>
+                    </p>
+                        <img src="{{asset('public/uploads.img')}}/{{ $auth->images }}">
+                </div>
+                <div class="menu-style">
+
+                <div class="menu-list">
+
                 <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
+                    <li><a href="/top">HOME</a></li>
+                    <li><a href="/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
+
+                </div>
+                </div>
+                <div class="drop-dawn">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+
         </div>
+
     </header>
     <div id="row">
         <div id="container">
@@ -41,24 +69,45 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>〇〇さんの</p>
-                <div>
-                <p>フォロー数</p>
-                <p>〇〇名</p>
+                <p> {{ Auth::user()->username }} さんの</p>
+                <div class="member">
+                <p class="follow">フォロー数</p>
+
+
+                <p>{{ $follower_count }}名</p>
+
+
+
                 </div>
-                <p class="btn"><a href="">フォローリスト</a></p>
-                <div>
-                <p>フォロワー数</p>
-                <p>〇〇名</p>
+                <p>
+                    <button type="submit" ><a href="/follow-list">フォローリスト</a></button>
+                </p>
+                <div class="member">
+                <p class="follow">フォロワー数</p>
+
+                <p>{{ $follow_count }}名</p>
+
                 </div>
-                <p class="btn"><a href="">フォロワーリスト</a></p>
+                <p>
+                    <button type="submit"><a href="/follower-list">フォロワーリスト</a></button>
+                    </p>
+
             </div>
-            <p class="btn"><a href="">ユーザー検索</a></p>
+
+            <p class="btn-search">
+                <button type="submit"><a href="/search">ユーザー検索</a></button>
+            </p>
+            <p class="search-tweet">
+                <button type="submit"><a href="/searchTweet">つぶやき検索</a></button>
+            </p>
         </div>
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+   <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/style.js')}}"></script>
+    <script src="{{asset('https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous')}}"></script>
+   <!-- Latest compiled and minified JavaScript -->
+<script src="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous')}}"></script>
 </body>
 </html>

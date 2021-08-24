@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -11,13 +11,23 @@ class CreateFollowsTable extends Migration
      *
      * @return void
      */
-    public function up()
+
+     public function up()
     {
         Schema::create('follows', function (Blueprint $table) {
-            $table->increments('id')->autoIncrement();
-            $table->integer('follow');
-            $table->integer('follower');
-            $table->timestamp('created_at')->useCurrent();
+            $table->unsignedInteger('follow')->comment('フォローしているユーザID');
+            $table->unsignedInteger('follower')->comment('フォローされているユーザID');
+
+            $table->index('follow');
+            $table->index('follower');
+            // $table->timestamp('updated_at')->useCurrent()->nullable();
+            // $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamps();
+
+            $table->unique([
+                'follow',
+                'follower'
+            ]);
         });
     }
 
@@ -30,4 +40,5 @@ class CreateFollowsTable extends Migration
     {
         Schema::dropIfExists('follows');
     }
+
 }

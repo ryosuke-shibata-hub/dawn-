@@ -2,8 +2,115 @@
 
 html{
     height: 100%;
+    color: #fff;
+
 }
 body{
     height: 100%;
-    background: #3C4767;
+    background: linear-gradient(#3C4778,80%,#ff6347);
+
+
+}
+#container {
+    max-width: 1024px;
+    width: 90%;
+    margin: 0 auto
+
+}
+
+
+.header {
+    margin: 0 auto;
+}
+
+
+p a {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10%;
+
+}
+
+
+h1 {
+     text-align: center;
+     padding-top: 100px;
+
+ }
+
+  #container div.main{
+     position: relative;
+     border-radius: 5px;
+     background-color: rgba(0, 0, 0, 0.1);
+     margin-left: 37%;
+     margin-right: 37%;
+     height: 100%;
+     padding-bottom: 5%;
+
+ }
+
+ #container form {
+     display: block;
+
+ }
+#container p.welcome {
+     color: #fff;
+     text-align: center;
+     font-size: 13px;
+     margin-bottom: 40px;
+     margin-top: 30px;
+    padding-top: 30px;
+
+
+ }
+
+ #container p.title {
+     text-align: center;
+     color: #fff;
+     font-size: 30px;
+     padding-bottom: 40px;
+
+ }
+
+
+#container form input[type="text"],
+#container form input[type="password"]{
+    position: relative;
+     border-radius: 5px;
+     border: 1px solid #3c4767;
+     display: block;
+     margin: 0 auto;
+     width: 80%;
+     height: 5%;
+    margin-bottom: 30px;
+
+
+ }
+
+
+#container input[type="submit"] {
+    border-radius: 5px;
+    border: 0px solid #3c4767;
+    color: #fff;
+    background-color: #3e62ad;
+    display: block;
+    margin: 0 auto;
+    position: right;
+    height: 30px;
+    width: 100px;
+    letter-spacing: 2px;
+    margin-left: 50%;
+
+
+}
+
+#container label  {
+    display: block;
+    margin: 0 auto;
+    margin-left: 10%;
+    font-size: 15px;
+    margin-bottom: 10px;
+
 }

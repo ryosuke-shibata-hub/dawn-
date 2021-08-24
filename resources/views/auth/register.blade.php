@@ -1,28 +1,51 @@
 @extends('layouts.logout')
 
+
+
+
 @section('content')
+
+
+
 
 {!! Form::open() !!}
 
+@csrf
+
+<div class="main">
 <h2>新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
 
-{{ Form::label('メールアドレス') }}
-{{ Form::text('mail',null,['class' => 'input']) }}
+{{ Form::label('UserName') }}
+{{ Form::text('username',null,['class' => 'input','placeholder'=>'UserName']) }}
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::label('MailAddress') }}
+{{ Form::text('mail',null,['class' => 'input','placeholder'=>'MailAddress']) }}
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password-confirm',null,['class' => 'input']) }}
+{{ Form::label('Password') }}
+{{ Form::password('password',null,['class' => 'input','placeholder'=>'Password']) }}
 
-{{ Form::submit('登録') }}
+{{ Form::label('password_confirmed') }}
+{{ Form::password('password_confirmed',null,['class' => 'input','placeholder'=>'password_confirmed']) }}
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
+ @if ($errors->any())
+        <div>
+            <ul style="list-style: none;">
+                @foreach ($errors->all() as $error)
+                    <li style="color: red; font-size: 14px;">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+{{ Form::submit('Register') }}
 
+
+<p><a href="/login" name="action" value="back">ログイン画面へ戻る</a></p>
+
+</div>
+@push('register')
+<link  href="{{ asset('css/register.css') }}" rel="stylesheet">
+@endpush
 {!! Form::close() !!}
-
 
 @endsection

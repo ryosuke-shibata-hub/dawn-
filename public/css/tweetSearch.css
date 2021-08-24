@@ -1,0 +1,70 @@
+
+#container .user_search {
+  display: block;
+  position: relative;
+  padding-left: 130px;
+  margin-top: 40px;
+  padding-bottom: 30px;
+  border-bottom: solid 4px #d3d3d3;
+
+}
+
+.form-search input[type="text"] {
+  width: 400px;
+  height: 50px;
+  border-radius: 5px;
+  border: solid 1px #000000;
+  outline: none;
+
+}
+
+input[type="image"] {
+  width:10%;
+  margin-left: 400px;
+  margin-top: -60px;
+}
+
+#container div.username {
+  position: relative;
+  display: block;
+  margin-left: 250px;
+  font-size: 20px;
+  margin-top: -40px;
+}
+
+img.user-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-radius: 30px;
+  width: 50px;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+
+.user_search p{
+  color: #808080;
+  position: relative;
+  display: inline-block;
+  left: 10%;
+  top: -30px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+
+}
+
+.follow_button .btn_unfollow{
+  color: #fff;
+  background-color: #B95656;
+  margin-left: 70%;
+  padding-top: -100px;
+}
+
+.follow_button .btn_follow{
+  color: #fff;
+  background-color: #4B71CA;
+  margin-left: 70%;
+  width: 125px;
+  padding-top: -100px;
+}

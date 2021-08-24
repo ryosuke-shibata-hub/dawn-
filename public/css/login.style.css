@@ -1,0 +1,153 @@
+@charset "utf-8";
+html{
+
+}
+
+#container .tweet input[type="text"]{
+  color: #000000;
+  position: relative;
+  display: block;
+  margin-left: 150px;
+  width:700px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+
+}
+
+::placeholder {
+  color: #c0c0c0;
+}
+
+#container img.my-profile{
+  position: relative;
+  width: 50px;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+#tweet {
+  position: relative;
+  display: block;
+  padding-left: 900px;
+  margin-bottom: 10px;
+
+}
+
+
+
+#container .tweet{
+  border-bottom: solid 4px #d3d3d3;
+}
+
+#container img.user-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-radius: 30px;
+  width: 50px;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+#container div.username {
+  position: relative;
+  margin-left:150px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-size: 12px;
+}
+
+#container div.text {
+  position: relative;
+  margin-top: -3%;
+  margin-bottom: 3%;
+  margin-left: 150px;
+}
+
+#container div.create-at {
+  position: relative;
+  display: block;
+  margin-left: 1000px;
+  margin-top: -8%;
+  margin-bottom: 8%;
+  font-size: 12px;
+
+
+}
+
+.form{
+  position: relative;
+
+  border-bottom: solid 1px #d3d3d3;
+}
+
+.btn-delete {
+  position: relative;
+  width:40px;
+  left: 90%;
+  margin-bottom: -10px;
+  transition: all .2s;
+}
+
+.btn-delete span {
+  position: absolute;
+  display: block;
+  white-space: nowrap;
+  left: 90%;
+  width: 40%;
+  bottom: -150%;
+  transform:translate(-50%,-50%);
+  transition: all .5s;
+}
+
+.btn-delete span:nth-child(2) {
+  opacity: 0;
+}
+
+.btn-delete:hover span:nth-child(1) {
+  opacity: 0;
+}
+
+.btn-delete:hover span:nth-child(2) {
+  opacity: 1;
+}
+
+.btn-update {
+  position: relative;
+  width:50px;
+  left: 85%;
+
+
+}
+
+#img{
+  margin-left: 85%;
+  margin-top: 15px;
+}
+
+.updateModal {
+  background-color: #fff;
+  margin-top:210px;
+  width:700px;
+  height:250px;
+  margin-left: 25%;
+  border-radius: 10px;
+}
+
+#recipient-name {
+  height: 130px;
+  width: 600px;
+  margin-left: 50px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: solid 1px #000000;
+  outline: none;
+}
+
+.btn-update img{
+  margin-bottom: 10px;
+}
